@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ad Detection</title>
+  <style>
+    body {
+      height: 2000px;
+      width: 2500px;
+    }
+
+    #ad {
+      width: 300px;
+      height: 250px;
+      background: #ee7202;
+      position: relative;
+      left: 100px;
+      top: 100px;
+    }
+
+    #mesurment {
+      left: 1000px;
+      top: 100px;
+      position: fixed;
+      padding: 20px;
+      background-color: #f1f1f1;
+    }
+
+    #activeUser {
+      background-color: #54ae32;
+      color: white;
+      padding: 4px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .viewabilityWrapper {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .note {
+      width: 500px;
+    }
+
+    #viewAbility {
+      color: white;
+      padding: 3px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="ad">
+    ADVERTISEMENT
+  </div>
+  <div id="mesurment">
+    <h3> AD DIV VIEWABILITY MEASUREMENT </h3>
+    <p><span id="activeUser"> Active User</span></p>
+    <p class="viewabilityWrapper"><span>Ad is viewable: </span><span id="viewAbility"></span> <span> (viewability
+        percentage ≥ 50% is visible)</span></p>
+    <p class="viewabilityWrapper"><span>Viewability Time: </span><span id="time"></span></p>
+    <p class="viewabilityWrapper"><span>Viewability Percentage: </span><span id="percentage"></span></p>
+    <p class="note">User inactivity timeout is set as 60s and Ad is considered viewable untill it is visible till 50%,
+      both can be configured.</p>
+  </div>
+</body>
+<script src="script.js"></script>
+<script>
+  function printStatus() {
+    if (typeof window.log === "function") {
+      window.log()
+    }
+
+    setTimeout(printStatus, 500);
+  }
+
+  printStatus();
+</script>
+
+</html>
