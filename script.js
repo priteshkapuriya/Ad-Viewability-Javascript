@@ -11,7 +11,7 @@ var adIsViewable = true,
   leftPercentage = 100,
   rightPercentage = 100,
   bottomPercentage = 100,
-  timeoutInMiliseconds = 10000,
+  timeoutInMiliseconds = 15000,
   userTimeoutId,
   isActiveUser = "Active User",
   adElement = document.getElementById("ad"),
@@ -139,7 +139,7 @@ function doInactive() {
   pauseadViewTimer();
 }
 
-// setting up events to check user activity and elements position on scroll
+// setting up events to check user activity and element's position on scroll
 function setupEvents() {
   document.addEventListener("mousemove", resetTimer, false);
   document.addEventListener("mousedown", resetTimer, false);
