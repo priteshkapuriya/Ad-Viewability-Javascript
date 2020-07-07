@@ -58,7 +58,7 @@ function updateDiv() {
   } else {
     activeUserElem.style.backgroundColor = "#54ae32";
   }
-  if(adIsViewable){
+  if (adIsViewable) {
     viewAbility.style.backgroundColor = "#54ae32";
   } else {
     viewAbility.style.backgroundColor = "#d54858";
